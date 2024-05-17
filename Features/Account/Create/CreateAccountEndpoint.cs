@@ -1,8 +1,11 @@
-﻿using WebApplication12.models;
+﻿
 
-namespace Account.Create
+using Data.models;
+using FastEndpoints;
+
+namespace Features.Account.Create
 {
-    internal class CreateAccountEndpoint(UserDbContext context)
+    public class CreateAccountEndpoint(UserDbContext context)
         : Endpoint<CreateAccountRequest, CreateAccountResponse, CreateAccountMapper>
     {
         public override void Configure()

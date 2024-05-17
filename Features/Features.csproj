@@ -5,5 +5,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="FastEndpoints" Version="5.25.0" />
+		<PackageReference Include="FastEndpoints.Swagger" Version="5.25.0" />
+	</ItemGroup>
+	<ItemGroup>
+		
+	  <ProjectReference Include="..\Data\Data.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<Using Include="FastEndpoints"/>
+	</ItemGroup>
 
 </Project>

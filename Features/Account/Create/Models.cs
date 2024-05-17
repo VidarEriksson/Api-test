@@ -1,6 +1,6 @@
-﻿using System.Globalization;
+﻿
 
-namespace Account.Create
+namespace Features.Account.Create
 {
     public class CreateAccountRequest
     {
@@ -15,7 +15,7 @@ namespace Account.Create
 
     }
 
-   
+
 
     public class CreateAccountResponse
     {
@@ -25,7 +25,7 @@ namespace Account.Create
             Message = message;
         }
 
-        public string Message {  get; set; }
+        public string Message { get; set; }
         public int UserId { get; }
     }
 }

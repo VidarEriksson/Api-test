@@ -1,6 +1,6 @@
-﻿namespace WebApplication12.models
+﻿namespace Data.models
 {
-    
+
     public class User
     {
         public int UserId { get; set; }

@@ -1,23 +1,20 @@
 global using FastEndpoints;
-
+using Data;
 using FastEndpoints.Swagger;
-using Microsoft.EntityFrameworkCore;
-using System.Data;
-using WebApplication12.models;
+using Features.Account.Create;
+using System.Reflection;
+
+
 
 
 var builder = WebApplication.CreateBuilder();
 
 
-builder.Services.AddFastEndpoints();
+builder.Services.AddFastEndpoints(options => options.Assemblies = [Assembly.GetAssembly(typeof(CreateAccountEndpoint))!]);
 builder.Services.SwaggerDocument();
+builder.Services.AddData(builder.Configuration);
 //builder.Services.AddAuthorization();
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ??
-    "server=localhost;port=3306;database=Athor;user=root;password=password;";
-    //throw new ArgumentException("Connectionstring missing, paste in user secret");
-
-builder.Services.AddDbContext<UserDbContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
 
 

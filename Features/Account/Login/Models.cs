@@ -1,9 +1,9 @@
-﻿namespace Account.Login
+﻿namespace Features.Account.Login
 
 {
     internal sealed class Request
     {
-        public string username {  get; set; }
+        public string username { get; set; }
         public string password { get; set; }
 
     }

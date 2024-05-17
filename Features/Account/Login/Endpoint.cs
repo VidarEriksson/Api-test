@@ -1,10 +1,10 @@
-﻿namespace Account.Delete
+﻿namespace Features.Account.Login
 {
     internal sealed class Endpoint : Endpoint<Request, Response, Mapper>
     {
         public override void Configure()
         {
-            Delete("/author/delete");
+            Post("/author/login");
             AllowAnonymous();
         }
 

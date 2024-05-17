@@ -1,8 +1,10 @@
-﻿using WebApplication12.models;
+﻿using Data.models;
 
-namespace Account.Create
+
+
+namespace Features.Account.Create
 {
-    internal sealed class CreateAccountMapper : Mapper<CreateAccountRequest, CreateAccountResponse, User>
+    public sealed class CreateAccountMapper : Mapper<CreateAccountRequest, CreateAccountResponse, User>
     {
         public override User ToEntity(CreateAccountRequest r)
         {
