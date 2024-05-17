@@ -1,22 +1,31 @@
-﻿namespace Account.Create
+﻿using System.Globalization;
+
+namespace Account.Create
 {
-    public class Request
+    public class CreateAccountRequest
     {
         public string Firstname { get; set; }
-        public string Lastname { get; set; } 
-        public string username { get; set; }
-        public string email { get; set; }
-        public string phone { get; set; }
-        public string city { get; set; }
-        public string password { get; set; }
+        public string Lastname { get; set; }
+        public string Username { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
+        public string City { get; set; }
+        public string Password { get; set; }
 
 
     }
 
    
 
-    public class Response
+    public class CreateAccountResponse
     {
+        public CreateAccountResponse(int userId, string message)
+        {
+            UserId = userId;
+            Message = message;
+        }
+
         public string Message {  get; set; }
+        public int UserId { get; }
     }
 }
