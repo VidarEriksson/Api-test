@@ -1,6 +1,6 @@
 ﻿namespace Data.models
 {
-
+    //Users table layout
     public class User
     {
         public int UserId { get; set; }

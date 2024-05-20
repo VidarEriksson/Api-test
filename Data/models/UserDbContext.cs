@@ -1,7 +1,7 @@
 ﻿namespace Data.models;
 
 using Microsoft.EntityFrameworkCore;
-
+//options for the db
 
 public class UserDbContext : DbContext
 {
